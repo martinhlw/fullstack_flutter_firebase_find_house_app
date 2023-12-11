@@ -19,7 +19,7 @@ class CityCard extends StatelessWidget {
       child: Column(
         children: [
           Image.asset(
-            'assets/images/city1.png',
+            city.imageUrl,
             width: 130,
             height: 102,
             fit: BoxFit.cover,
@@ -27,7 +27,7 @@ class CityCard extends StatelessWidget {
            SizedBox(height: 11,
            ),
            Text(
-            'Jakarta',
+            city.name,
             style: blackTextStyle.copyWith(
               fontSize: 16,
             ),
