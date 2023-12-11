@@ -18,12 +18,36 @@ class CityCard extends StatelessWidget {
       color: Color(0xffF6F7F8),
       child: Column(
         children: [
-          Image.asset(
-            city.imageUrl,
-            width: 130,
-            height: 102,
-            fit: BoxFit.cover,
-           ),        
+          Stack(
+            children: [
+              Image.asset(
+                city.imageUrl,
+                width: 130,
+                height: 102,
+                fit: BoxFit.cover,
+               ),
+               city.isPopular ? Align(
+                alignment: Alignment.topRight,
+                  child: Container(
+                  width: 50,
+                  height: 28,
+                  decoration: BoxDecoration(
+                    color: purpleColor,
+                    borderRadius: BorderRadius.only(
+                      bottomLeft: Radius.circular(30),
+                    ),
+                  ),
+                  child: Center(
+                    child: Image.asset(
+                      'assets/images/star_icon.png',
+                      width: 22,
+                      height: 22,
+                      ),
+                  ),
+                 ),
+               ) : Container(),
+            ],
+          ),        
            SizedBox(height: 11,
            ),
            Text(

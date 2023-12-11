@@ -14,6 +14,7 @@ class HomePage extends StatelessWidget {
           ),
           child: ListView(
             children: [
+              // NOTE: TITLE/HEADER
               Padding(
                 padding: EdgeInsets.only(left: edge),
                 child: Text(
@@ -62,7 +63,6 @@ class HomePage extends StatelessWidget {
                       City(
                         id: 1, 
                         name: 'Jakarta',
-                        isPopular: false,
                         imageUrl: 'assets/images/city1.png',  
                         ),
                       ),
@@ -73,7 +73,7 @@ class HomePage extends StatelessWidget {
                       City(
                         id: 2, 
                         name: 'Bandung',
-                        isPopular: false,
+                        isPopular: true,
                         imageUrl: 'assets/images/city2.png',  
                         ),
                       ),
@@ -84,7 +84,6 @@ class HomePage extends StatelessWidget {
                       City(
                         id: 3, 
                         name: 'Surabaya',
-                        isPopular: false,
                         imageUrl: 'assets/images/city3.png',  
                         ),
                       ),
