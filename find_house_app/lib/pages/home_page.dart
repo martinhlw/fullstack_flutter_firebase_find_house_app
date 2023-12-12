@@ -1,6 +1,7 @@
 import 'package:find_house_app/models/city.dart';
 import 'package:find_house_app/theme.dart';
 import 'package:find_house_app/widgets/city_card.dart';
+import 'package:find_house_app/widgets/space_card.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -39,6 +40,7 @@ class HomePage extends StatelessWidget {
               SizedBox(
                 height: 24,
               ),
+              // NOTE : POPULAR CITY
               Padding(
                 padding: EdgeInsets.only(left: edge),
                 child: Text(
@@ -92,6 +94,24 @@ class HomePage extends StatelessWidget {
                     ),
                   ],
                 ),
+              ),
+              // NOTE : RECOMMENDED SPACE
+              Padding(
+                padding: EdgeInsets.only(left: edge),
+                child: Text(
+                  'Recommended Space',
+                  style: regularTextStyle.copyWith(
+                    fontSize: 20,
+                  ),
+                ),
+              ),
+              SizedBox(
+                height: 16,
+              ),
+              Column(
+                children: [
+                  SpaceCard(),
+                ],
               ),
             ],
           ),
