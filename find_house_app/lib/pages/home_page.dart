@@ -1,5 +1,7 @@
 import 'package:find_house_app/models/city.dart';
 import 'package:find_house_app/models/space.dart';
+import 'package:find_house_app/models/tips.dart';
+import 'package:find_house_app/widgets/tips_card.dart';
 import 'package:find_house_app/theme.dart';
 import 'package:find_house_app/widgets/city_card.dart';
 import 'package:find_house_app/widgets/space_card.dart';
@@ -148,7 +150,7 @@ class HomePage extends StatelessWidget {
                       Space(
                         id: 3,
                         name: 'Rumah Damar',
-                        imageUrl:'assets/images/space3.png',
+                        imageUrl: 'assets/images/space3.png',
                         price: 2000,
                         city: 'Bandung',
                         country: 'Indonesia',
@@ -158,8 +160,64 @@ class HomePage extends StatelessWidget {
                   ],
                 ),
               ),
+              SizedBox(
+                height: 30,
+              ),
+              //NOTE: TIPS & GUIDANCE
+              Padding(
+                padding: EdgeInsets.only(left: edge),
+                child: Text(
+                  'Tips & Guidance',
+                  style: regularTextStyle.copyWith(
+                    fontSize: 20,
+                  ),
+                ),
+              ),
+              SizedBox(
+                height: 16,
+              ),
+              Padding(
+                padding: EdgeInsets.symmetric(
+                  horizontal: edge,
+                ),
+                child: Column(
+                  children: [
+                    TipsCard(
+                      Tips(
+                          id: 1,
+                          title: 'City Guidlines',
+                          imageUrl: 'assets/images/tips.png',
+                          updatedAt: '10 Dec'),
+                    ),
+                    SizedBox(
+                      height: 4,
+                    ),
+                    TipsCard(
+                      Tips(
+                          id: 2,
+                          title: 'Jakarta Fairship',
+                          imageUrl: 'assets/images/tips2.png',
+                          updatedAt: '15 Dec'),
+                    ),
+                  ],
+                ),
+              ),
             ],
           ),
+        ),
+        SizedBox(
+          height: 50,
+        ),
+        Container(
+          height: 65,
+          width: MediaQuery.of(context).size.width - (2 * edge),
+          margin: EdgeInsets.symmetric(
+            horizontal: edge,
+          ),
+          decoration: BoxDecoration(
+              color: Color(0xFF6F7F8), 
+              borderRadius: BorderRadius.circular(23),
+              ),
         ),
       ),
     );
