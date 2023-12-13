@@ -3,10 +3,10 @@ import 'package:find_house_app/theme.dart';
 import 'package:flutter/material.dart';
 
 class SpaceCard extends StatelessWidget {
-
   final Space space;
 
-  SpaceCard(this.space, {required String imageUrl});
+  // Remove the imageUrl parameter from the constructor
+  SpaceCard(this.space);
 
   @override
   Widget build(BuildContext context) {
@@ -85,12 +85,12 @@ class SpaceCard extends StatelessWidget {
                       ),
                     ),
                   ]),
-            ), 
+            ),
             SizedBox(
               height: 14,
             ),
             Text(
-              '${space.city}, ${space.country}', 
+              '${space.city}, ${space.country}',
               style: greyTextStyle,
             ),
           ],

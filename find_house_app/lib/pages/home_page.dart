@@ -65,32 +65,32 @@ class HomePage extends StatelessWidget {
                     ),
                     CityCard(
                       City(
-                        id: 1, 
+                        id: 1,
                         name: 'Jakarta',
-                        imageUrl: 'assets/images/city1.png',  
-                        ),
+                        imageUrl: 'assets/images/city1.png',
                       ),
+                    ),
                     SizedBox(
                       width: 30,
                     ),
-                   CityCard(
+                    CityCard(
                       City(
-                        id: 2, 
+                        id: 2,
                         name: 'Bandung',
                         isPopular: true,
-                        imageUrl: 'assets/images/city2.png',  
-                        ),
+                        imageUrl: 'assets/images/city2.png',
                       ),
+                    ),
                     SizedBox(
                       width: 30,
                     ),
-                   CityCard(
+                    CityCard(
                       City(
-                        id: 3, 
+                        id: 3,
                         name: 'Surabaya',
-                        imageUrl: 'assets/images/city3.png',  
-                        ),
+                        imageUrl: 'assets/images/city3.png',
                       ),
+                    ),
                     SizedBox(
                       width: 30,
                     ),
@@ -114,42 +114,42 @@ class HomePage extends StatelessWidget {
                 children: [
                   SpaceCard(
                     Space(
-                    id: 1,
-                    name: 'Rumah Velman',
-                    imageUrl: 'assets/images/space1.png',
-                    price: 2000,
-                    city: 'Bandung',
-                    country: 'Indonesia',
-                    rating: 4,
-                    ),    
+                      id: 1,
+                      name: 'Rumah Velman',
+                      imageUrl: 'assets/images/space1.png',
+                      price: 2000,
+                      city: 'Bandung',
+                      country: 'Indonesia',
+                      rating: 4,
+                    ),
                   ),
                   SizedBox(
                     height: 30,
                   ),
                   SpaceCard(
                     Space(
-                    id: 1,
-                    name: 'Rumah Velman',
-                    imageUrl: 'assets/images/space1.png',
-                    price: 2000,
-                    city: 'Bandung',
-                    country: 'Indonesia',
-                    rating: 4,
-                    ),    
+                      id: 2,
+                      name: 'Rumah Werky',
+                      imageUrl: 'assets/images/space2.png',
+                      price: 2000,
+                      city: 'Bandung',
+                      country: 'Indonesia',
+                      rating: 4,
+                    ),
                   ),
                   SizedBox(
                     height: 30,
                   ),
                   SpaceCard(
                     Space(
-                    id: 1,
-                    name: 'Rumah Velman',
-                    imageUrl: 'assets/images/space1.png',
-                    price: 2000,
-                    city: 'Bandung',
-                    country: 'Indonesia',
-                    rating: 4,
-                    ),    
+                      id: 3,
+                      name: 'Rumah Damar',
+                      imageUrl:'assets/images/space3.png',
+                      price: 2000,
+                      city: 'Bandung',
+                      country: 'Indonesia',
+                      rating: 4,
+                    ),
                   ),
                 ],
               ),
