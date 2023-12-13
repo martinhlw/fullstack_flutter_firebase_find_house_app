@@ -110,48 +110,53 @@ class HomePage extends StatelessWidget {
               SizedBox(
                 height: 16,
               ),
-              Column(
-                children: [
-                  SpaceCard(
-                    Space(
-                      id: 1,
-                      name: 'Rumah Velman',
-                      imageUrl: 'assets/images/space1.png',
-                      price: 2000,
-                      city: 'Bandung',
-                      country: 'Indonesia',
-                      rating: 4,
+              Padding(
+                padding: EdgeInsets.symmetric(
+                  horizontal: edge,
+                ),
+                child: Column(
+                  children: [
+                    SpaceCard(
+                      Space(
+                        id: 1,
+                        name: 'Rumah Velman',
+                        imageUrl: 'assets/images/space1.png',
+                        price: 2000,
+                        city: 'Bandung',
+                        country: 'Indonesia',
+                        rating: 4,
+                      ),
                     ),
-                  ),
-                  SizedBox(
-                    height: 30,
-                  ),
-                  SpaceCard(
-                    Space(
-                      id: 2,
-                      name: 'Rumah Werky',
-                      imageUrl: 'assets/images/space2.png',
-                      price: 2000,
-                      city: 'Bandung',
-                      country: 'Indonesia',
-                      rating: 4,
+                    SizedBox(
+                      height: 30,
                     ),
-                  ),
-                  SizedBox(
-                    height: 30,
-                  ),
-                  SpaceCard(
-                    Space(
-                      id: 3,
-                      name: 'Rumah Damar',
-                      imageUrl:'assets/images/space3.png',
-                      price: 2000,
-                      city: 'Bandung',
-                      country: 'Indonesia',
-                      rating: 4,
+                    SpaceCard(
+                      Space(
+                        id: 2,
+                        name: 'Rumah Werky',
+                        imageUrl: 'assets/images/space2.png',
+                        price: 2000,
+                        city: 'Bandung',
+                        country: 'Indonesia',
+                        rating: 4,
+                      ),
                     ),
-                  ),
-                ],
+                    SizedBox(
+                      height: 30,
+                    ),
+                    SpaceCard(
+                      Space(
+                        id: 3,
+                        name: 'Rumah Damar',
+                        imageUrl:'assets/images/space3.png',
+                        price: 2000,
+                        city: 'Bandung',
+                        country: 'Indonesia',
+                        rating: 4,
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ],
           ),
