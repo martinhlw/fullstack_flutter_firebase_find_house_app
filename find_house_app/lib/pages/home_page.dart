@@ -1,4 +1,5 @@
 import 'package:find_house_app/models/city.dart';
+import 'package:find_house_app/models/space.dart';
 import 'package:find_house_app/theme.dart';
 import 'package:find_house_app/widgets/city_card.dart';
 import 'package:find_house_app/widgets/space_card.dart';
@@ -111,15 +112,45 @@ class HomePage extends StatelessWidget {
               ),
               Column(
                 children: [
-                  SpaceCard(),
+                  SpaceCard(
+                    Space(
+                    id: 1,
+                    name: 'Rumah Velman',
+                    imageUrl: 'assets/images/space1.png',
+                    price: 2000,
+                    city: 'Bandung',
+                    country: 'Indonesia',
+                    rating: 4,
+                    ),    
+                  ),
                   SizedBox(
                     height: 30,
                   ),
-                  SpaceCard(),
+                  SpaceCard(
+                    Space(
+                    id: 1,
+                    name: 'Rumah Velman',
+                    imageUrl: 'assets/images/space1.png',
+                    price: 2000,
+                    city: 'Bandung',
+                    country: 'Indonesia',
+                    rating: 4,
+                    ),    
+                  ),
                   SizedBox(
                     height: 30,
                   ),
-                  SpaceCard(),
+                  SpaceCard(
+                    Space(
+                    id: 1,
+                    name: 'Rumah Velman',
+                    imageUrl: 'assets/images/space1.png',
+                    price: 2000,
+                    city: 'Bandung',
+                    country: 'Indonesia',
+                    rating: 4,
+                    ),    
+                  ),
                 ],
               ),
             ],
