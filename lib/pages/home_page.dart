@@ -7,10 +7,15 @@ import 'package:find_house_app/theme.dart';
 import 'package:find_house_app/widgets/city_card.dart';
 import 'package:find_house_app/widgets/space_card.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:find_house_app/providers/space_provider.dart';
 
 class HomePage extends StatelessWidget {
   @override
+  
   Widget build(BuildContext context) {
+    var spaceProvider = Provider.of<SpaceProvider>(context);
+
     return Scaffold(
       backgroundColor: whiteColor,
       body: SafeArea(
@@ -101,12 +106,12 @@ class HomePage extends StatelessWidget {
               ),
             ),
             // NOTE : RECOMMENDED SPACE
-            Padding(
+Padding(
               padding: EdgeInsets.only(left: edge),
               child: Text(
                 'Recommended Space',
                 style: regularTextStyle.copyWith(
-                  fontSize: 20,
+                  fontSize: 16,
                 ),
               ),
             ),
@@ -117,53 +122,34 @@ class HomePage extends StatelessWidget {
               padding: EdgeInsets.symmetric(
                 horizontal: edge,
               ),
-              child: Column(
-                children: [
-                  SpaceCard(
-                    Space(
-                      id: 1,
-                      name: 'Rumah Velman',
-                      imageUrl: 'assets/images/space1.png',
-                      price: 2000,
-                      city: 'Bandung',
-                      country: 'Indonesia',
-                      rating: 4,
-                    ),
-                  ),
-                  SizedBox(
-                    height: 30,
-                  ),
-                  SpaceCard(
-                    Space(
-                      id: 2,
-                      name: 'Rumah Werky',
-                      imageUrl: 'assets/images/space2.png',
-                      price: 2000,
-                      city: 'Bandung',
-                      country: 'Indonesia',
-                      rating: 4,
-                    ),
-                  ),
-                  SizedBox(
-                    height: 30,
-                  ),
-                  SpaceCard(
-                    Space(
-                      id: 3,
-                      name: 'Rumah Damar',
-                      imageUrl: 'assets/images/space3.png',
-                      price: 2000,
-                      city: 'Bandung',
-                      country: 'Indonesia',
-                      rating: 4,
-                    ),
-                  ),
-                ],
+              child: FutureBuilder(
+                future: spaceProvider.getRecommendedSpaces(),
+                builder: (context, snapshot) {
+                  if (snapshot.hasData) {
+                    List<Space> data = snapshot.data as List<Space>;
+
+                    int index = 0;
+
+                    return Column(
+                      children: data.map((item) {
+                        index++;
+                        return Container(
+                          margin: EdgeInsets.only(
+                            top: index == 1 ? 0 : 30,
+                          ),
+                          child: SpaceCard(item),
+                        );
+                      }).toList(),
+                    );
+                  }
+
+                  return Center(
+                    child: CircularProgressIndicator(),
+                  );
+                },
               ),
             ),
-            SizedBox(
-              height: 30,
-            ),
+
             //NOTE: TIPS & GUIDANCE
             Padding(
               padding: EdgeInsets.only(left: edge),
